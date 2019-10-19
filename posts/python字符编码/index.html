@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Python字符编码 - Shevon`s Blog</title>
+    <base href="https://shevonwang.github.io/">
+    <link rel="stylesheet" href="https://shevonwang.github.io/css/styles.css">
+    <link rel="stylesheet" href="https://shevonwang.github.io/css/font.css">
+</head>
+<body><header>
+    <nav class="breadcrumb grape">
+	<h4><a href="/">Shevon`s Blog</a></h4>
+	<div id="space"></div>
+        
+        <a href="/">Home</a>
+        
+        <a href="/posts">Posts</a>
+        
+    </nav>
+</header>
+
+<main id="single">
+    <div id="post" class="white">
+	<div class="container">
+	    <div id="title">
+                <h1>Python字符编码</h1>
+                <time datetime="2016-11-16T12:48:55&#43;0000">2016-11-16</time>
+
+	    </div>
+            <section class="post-content">
+                <p>用python爬学校官网，发现抓取的中文乱码，所以就 <code>pip</code> 下了个 <code>chardet</code> 包，感觉挺好。</p>
+
+<p>先用 <code>chardet.detect(str)</code> 判断字符格式，然后搭配着 <code>unicode(str, &quot;字符格式&quot;).encode(&quot;UTF-8&quot;)</code>  ，将 <code>GBK</code> 、 <code>GB2312</code> 等格式的字符转为 <code>UTF-8</code>。</p>
+
+<p>这样咱们的中文就可以正常显示啦！ ^-^</p>
+
+            </section>
+	</div>
+    </div>
+</main>
+<footer class="sand">
+    <span class="footer-text">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
+</footer>
+<link rel="stylesheet" href="https://shevonwang.github.io/css/solarized-light.css"/>
+<script src="https://shevonwang.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

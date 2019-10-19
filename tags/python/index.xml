@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Shevon`s Blog</title>
+    <link>https://shevonwang.github.io/tags/python/</link>
+    <description>Recent content in Python on Shevon`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Nov 2016 12:48:55 +0000</lastBuildDate>
+    
+	<atom:link href="https://shevonwang.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python字符编码</title>
+      <link>https://shevonwang.github.io/posts/python%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</link>
+      <pubDate>Wed, 16 Nov 2016 12:48:55 +0000</pubDate>
+      
+      <guid>https://shevonwang.github.io/posts/python%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</guid>
+      <description>用python爬学校官网，发现抓取的中文乱码，所以就 pip 下了个 chardet 包，感觉挺好。
+先用 chardet.detect(str) 判断字符格式，然后搭配着 unicode(str, &amp;quot;字符格式&amp;quot;).encode(&amp;quot;UTF-8&amp;quot;) ，将 GBK 、 GB2312 等格式的字符转为 UTF-8。
+这样咱们的中文就可以正常显示啦！ ^-^</description>
+    </item>
+    
+    <item>
+      <title>Python快速搭建HTTP服务</title>
+      <link>https://shevonwang.github.io/posts/python%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhttp%E6%9C%8D%E5%8A%A1/</link>
+      <pubDate>Tue, 25 Oct 2016 22:22:52 +0000</pubDate>
+      
+      <guid>https://shevonwang.github.io/posts/python%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhttp%E6%9C%8D%E5%8A%A1/</guid>
+      <description>今天逛知乎，发现了个关于Python好玩的命令行，还挺实用的。
+在安装了Python的前提下，可以在终端使用一行命令快速搭建HTTP服务。命令行如下：
+python -m SimpleHTTPServer 8000
+在同个局域网下的电脑，通过&amp;rdquo;ip:端口&amp;rdquo;，也可以实现文件目录共享。 若需退出，可 Ctrl+C 终止此进程。</description>
+    </item>
+    
+  </channel>
+</rss>

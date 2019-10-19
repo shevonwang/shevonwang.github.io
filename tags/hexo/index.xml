@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hexo on Shevon`s Blog</title>
+    <link>https://shevonwang.github.io/tags/hexo/</link>
+    <description>Recent content in hexo on Shevon`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Nov 2016 11:32:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://shevonwang.github.io/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hexo的next主题无法显示完整网页</title>
+      <link>https://shevonwang.github.io/posts/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E5%AE%8C%E6%95%B4%E7%BD%91%E9%A1%B5/</link>
+      <pubDate>Sun, 13 Nov 2016 11:32:36 +0000</pubDate>
+      
+      <guid>https://shevonwang.github.io/posts/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E5%AE%8C%E6%95%B4%E7%BD%91%E9%A1%B5/</guid>
+      <description>前几天上传了一篇文章后，就发现我的博客显示不出完整网页，F12检查，发现说的是没有获取到vendors目录下的资源。所以网上找了找原因，发现不少人都出现了这个问题.。
+我最开始使用的解决方案是由dslztx博主提供的，就是在 .deploy_git 子目录下添加一个名为 .nojekyll 的文件。在具体部署时，该文件被提交到相应的 Github Repository ，从而使得能够正常使用Hexo生成的静态站点。这个时候网页就可以正常完整的显示出来了。
+此时我的next主题版本是 5.0.2 的，在我升成 5.1.0 后，发现问题又来了，跟原来问题一样，网页又不能正常显示了。直接上Git Hub，发现是作者将 vendors 目录改名成 lib ，但是在主题配置文件 _config.yml 里， vendors: 仍是 _internal: vendors ， 这样肯定不行。
+所以，在主题配置文件里，要将 _internal: vendors 改成 _internal: lib 其它不用改，这样就可以了。
+网页又可以正常显示了 ^_^ 。</description>
+    </item>
+    
+    <item>
+      <title>hexo删除git commit历史</title>
+      <link>https://shevonwang.github.io/posts/hexo%E5%88%A0%E9%99%A4git-commit%E5%8E%86%E5%8F%B2/</link>
+      <pubDate>Sun, 23 Oct 2016 15:49:03 +0000</pubDate>
+      
+      <guid>https://shevonwang.github.io/posts/hexo%E5%88%A0%E9%99%A4git-commit%E5%8E%86%E5%8F%B2/</guid>
+      <description>由于github给的pages免费空间只有300M，所以很有必要及时清理以前留下的commit历史记录。
+操作步骤如下：
+ 将 .deply_git 文件备份，以免意外情况发生
+ 删除 .deploy_git 和 public 文件
+ 进入 \hexo\blog 路径
+ 依次执行 hexo clean hexo g -d
+  </description>
+    </item>
+    
+  </channel>
+</rss>

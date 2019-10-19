@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>免流 on Shevon`s Blog</title>
+    <link>https://shevonwang.github.io/tags/%E5%85%8D%E6%B5%81/</link>
+    <description>Recent content in 免流 on Shevon`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Oct 2016 23:33:39 +0000</lastBuildDate>
+    
+	<atom:link href="https://shevonwang.github.io/tags/%E5%85%8D%E6%B5%81/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>免流常用端口</title>
+      <link>https://shevonwang.github.io/posts/%E5%85%8D%E6%B5%81%E5%B8%B8%E7%94%A8%E7%AB%AF%E5%8F%A3/</link>
+      <pubDate>Sun, 23 Oct 2016 23:33:39 +0000</pubDate>
+      
+      <guid>https://shevonwang.github.io/posts/%E5%85%8D%E6%B5%81%E5%B8%B8%E7%94%A8%E7%AB%AF%E5%8F%A3/</guid>
+      <description> 移动免流端口：137 138 264 524
+ 电信免流端口：189
+ 联通免流端口：130 131 132 155 156 185 186 145 176
+  </description>
+    </item>
+    
+    <item>
+      <title>shadowsocksR代理腾讯云免流(下)</title>
+      <link>https://shevonwang.github.io/posts/shadowsocksr%E4%BB%A3%E7%90%86%E8%85%BE%E8%AE%AF%E4%BA%91%E5%85%8D%E6%B5%81-%E4%B8%8B/</link>
+      <pubDate>Sun, 23 Oct 2016 14:33:34 +0000</pubDate>
+      
+      <guid>https://shevonwang.github.io/posts/shadowsocksr%E4%BB%A3%E7%90%86%E8%85%BE%E8%AE%AF%E4%BA%91%E5%85%8D%E6%B5%81-%E4%B8%8B/</guid>
+      <description>shadowsockR配置 按照上一篇文章的操作步骤，此时已进入putty的命令行输入框，即可以通过putty操作腾讯云服务器。
+1.基本库安装 centos版：
+yum install python-setuptools &amp;amp;&amp;amp; easy_install pip yum install git
+2.获取源代码 git clone -b manyuser https://github.com/breakwa11/shadowsocks.git
+执行完毕后此目录会新建一个shadowsocks目录，其中根目录的是多用户版（即数据库版），子目录中的是单用户版。
+根目录即 ./shadowsocks
+子目录即 ./shadowsocks/shadowsocks
+3.服务端配置 shadowsocks目录内，把apiconfig.py复制为userapiconfig.py后，对userapiconfig.py里以上内容进行相应修改：
+vim userapiconfig.py
+敲 I 进入编辑模式，修改接口类型 API_INTERFACE = &#39;mudbjson&#39; 按 Esc 退出编辑模式，编辑:wq 退出。
+接着，通过使用脚本mujson_mgr.py添加端口及相应的加密、协议、混淆等配置：
+python mujson_mgr.py -a -p 138 -k 123456 -m rc4-md5 -O auth_sha1_v2_compatible -o http_simple_compatible
+注：123456为shadowsocksR客户端密码。
+4.服务端运行与停止
+增加脚本可执行权限
+chmod +x *.sh
+后台运行（无log，ssh窗口关闭后也继续运行）
+./run.sh
+后台运行（输出log，ssh窗口关闭后也继续运行）
+./logrun.sh
+后台运行时查看运行情况
+./tail.sh
+停止运行
+./stop.sh
+注：通过脚本运行默认日志会保存在根目录的ssserver.log，可手动查看。
+5.更新源代码
+如果代码有更新可用本命令更新代码</description>
+    </item>
+    
+    <item>
+      <title>shadowsocksR代理腾讯云免流(上)</title>
+      <link>https://shevonwang.github.io/posts/shadowsocksr%E4%BB%A3%E7%90%86%E8%85%BE%E8%AE%AF%E4%BA%91%E5%85%8D%E6%B5%81-%E4%B8%8A/</link>
+      <pubDate>Sun, 23 Oct 2016 13:59:07 +0000</pubDate>
+      
+      <guid>https://shevonwang.github.io/posts/shadowsocksr%E4%BB%A3%E7%90%86%E8%85%BE%E8%AE%AF%E4%BA%91%E5%85%8D%E6%B5%81-%E4%B8%8A/</guid>
+      <description>安装配置putty 1.下载 进入 下载地址。 下载 The latest release version (稳定版)的 Zip file: putty.zip。
+2.生成公钥和私钥 在 puttygen 里生成公钥保存私钥，并且在 腾讯云控制台 创建刚刚在 puttygen 里生成的公钥。
+3.配置 在 putty 中， Window -&amp;gt; Translation -&amp;gt; Remote character set:选择为 UTF-8。
+Connection -&amp;gt; SSH -&amp;gt; Auth -&amp;gt; Private key file for authentication: 选择保存好的私钥文件路径。
+Session -&amp;gt; Host Name 中编辑 root@你的主机IP (公网IP) -&amp;gt; Saved Sessions 编辑一个名字方便存储 -&amp;gt; save ，下次登录可直接 load。
+到此为止完成 putty 的配置， 点击 open 弹出黑框框，此时可开始配置 shadowsocks。</description>
+    </item>
+    
+  </channel>
+</rss>

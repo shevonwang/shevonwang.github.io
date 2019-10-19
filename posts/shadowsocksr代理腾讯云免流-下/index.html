@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>shadowsocksR代理腾讯云免流(下) - Shevon`s Blog</title>
+    <base href="https://shevonwang.github.io/">
+    <link rel="stylesheet" href="https://shevonwang.github.io/css/styles.css">
+    <link rel="stylesheet" href="https://shevonwang.github.io/css/font.css">
+</head>
+<body><header>
+    <nav class="breadcrumb grape">
+	<h4><a href="/">Shevon`s Blog</a></h4>
+	<div id="space"></div>
+        
+        <a href="/">Home</a>
+        
+        <a href="/posts">Posts</a>
+        
+    </nav>
+</header>
+
+<main id="single">
+    <div id="post" class="white">
+	<div class="container">
+	    <div id="title">
+                <h1>shadowsocksR代理腾讯云免流(下)</h1>
+                <time datetime="2016-10-23T14:33:34&#43;0000">2016-10-23</time>
+
+	    </div>
+            <section class="post-content">
+                
+
+<h2 id="shadowsockr配置">shadowsockR配置</h2>
+
+<p>按照上一篇文章的操作步骤，此时已进入putty的命令行输入框，即可以通过putty操作腾讯云服务器。</p>
+
+<h3 id="1-基本库安装">1.基本库安装</h3>
+
+<p>centos版：</p>
+
+<p>yum install python-setuptools &amp;&amp; easy_install pip
+yum install git</p>
+
+<h3 id="2-获取源代码">2.获取源代码</h3>
+
+<p>git clone -b manyuser <a href="https://github.com/breakwa11/shadowsocks.git">https://github.com/breakwa11/shadowsocks.git</a></p>
+
+<p>执行完毕后此目录会新建一个shadowsocks目录，其中根目录的是多用户版（即数据库版），子目录中的是单用户版。<br />
+根目录即 ./shadowsocks<br />
+子目录即 ./shadowsocks/shadowsocks</p>
+
+<h3 id="3-服务端配置">3.服务端配置</h3>
+
+<p>shadowsocks目录内，把apiconfig.py复制为userapiconfig.py后，对userapiconfig.py里以上内容进行相应修改：<br />
+<code>vim userapiconfig.py</code><br />
+敲 <code>I</code> 进入编辑模式，修改接口类型 <code>API_INTERFACE</code> = <code>'mudbjson'</code> 按 <code>Esc</code> 退出编辑模式，编辑<code>:wq</code> 退出。<br />
+接着，通过使用脚本mujson_mgr.py添加端口及相应的加密、协议、混淆等配置：<br />
+python mujson_mgr.py -a -p 138 -k 123456 -m rc4-md5 -O auth_sha1_v2_compatible -o http_simple_compatible</p>
+
+<p>注：123456为shadowsocksR客户端密码。</p>
+
+<p>4.服务端运行与停止</p>
+
+<p>增加脚本可执行权限<br />
+chmod +x *.sh</p>
+
+<p>后台运行（无log，ssh窗口关闭后也继续运行）<br />
+./run.sh</p>
+
+<p>后台运行（输出log，ssh窗口关闭后也继续运行）<br />
+./logrun.sh</p>
+
+<p>后台运行时查看运行情况<br />
+./tail.sh</p>
+
+<p>停止运行<br />
+./stop.sh</p>
+
+<p>注：通过脚本运行默认日志会保存在根目录的ssserver.log，可手动查看。</p>
+
+<p>5.更新源代码</p>
+
+<p>如果代码有更新可用本命令更新代码</p>
+
+<p>进入shadowsocks目录<br />
+cd shadowsocks</p>
+
+<p>执行<br />
+git pull</p>
+
+<p>成功后重启ss服务</p>
+
+<p>6.其它异常</p>
+
+<p>如果你的服务端python版本在2.6以下，那么必须更新python到2.6.x或2.7.x版本
+其它参见 <a href="https://github.com/breakwa11/shadowsocks-rss/wiki/ulimit">https://github.com/breakwa11/shadowsocks-rss/wiki/ulimit</a></p>
+
+<p>上述步骤参见于 <a href="https://github.com/breakwa11/shadowsocks-rss/wiki/Server-Setup(manyuser-with-mudbjson">https://github.com/breakwa11/shadowsocks-rss/wiki/Server-Setup(manyuser-with-mudbjson</a>)</p>
+
+<p>7.设置shadowsocksR开机启动</p>
+
+<p>为避免服务器重启造成的免流失效，可将shadowsocksR设置为开机启动。
+步骤如下：</p>
+
+<p><code>cd /etc</code>
+<code>vim rc.local</code><br />
+将以下命令粘贴进去</p>
+
+<p><code>eval $(ps -ef | grep &quot;[0-9] python /root/shadowsocks/server\\.py m&quot; | awk '{print &quot;kill &quot;$2}')</code>
+<code>ulimit -n 512000</code>
+<code>nohup python /root/shadowsocks/server.py m&gt;&gt; /dev/null 2&gt;&amp;1 &amp;</code></p>
+
+<p><code>:wq</code> 退出</p>
+
+            </section>
+	</div>
+    </div>
+</main>
+<footer class="sand">
+    <span class="footer-text">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
+</footer>
+<link rel="stylesheet" href="https://shevonwang.github.io/css/solarized-light.css"/>
+<script src="https://shevonwang.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTTP on Shevon`s Blog</title>
+    <link>https://shevonwang.github.io/tags/http/</link>
+    <description>Recent content in HTTP on Shevon`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Oct 2016 22:22:52 +0000</lastBuildDate>
+    
+	<atom:link href="https://shevonwang.github.io/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python快速搭建HTTP服务</title>
+      <link>https://shevonwang.github.io/posts/python%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhttp%E6%9C%8D%E5%8A%A1/</link>
+      <pubDate>Tue, 25 Oct 2016 22:22:52 +0000</pubDate>
+      
+      <guid>https://shevonwang.github.io/posts/python%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhttp%E6%9C%8D%E5%8A%A1/</guid>
+      <description>今天逛知乎，发现了个关于Python好玩的命令行，还挺实用的。
+在安装了Python的前提下，可以在终端使用一行命令快速搭建HTTP服务。命令行如下：
+python -m SimpleHTTPServer 8000
+在同个局域网下的电脑，通过&amp;rdquo;ip:端口&amp;rdquo;，也可以实现文件目录共享。 若需退出，可 Ctrl+C 终止此进程。</description>
+    </item>
+    
+  </channel>
+</rss>

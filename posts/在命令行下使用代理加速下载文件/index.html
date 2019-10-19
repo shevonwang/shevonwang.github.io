@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>在命令行下使用代理加速下载文件 - Shevon`s Blog</title>
+    <base href="https://shevonwang.github.io/">
+    <link rel="stylesheet" href="https://shevonwang.github.io/css/styles.css">
+    <link rel="stylesheet" href="https://shevonwang.github.io/css/font.css">
+</head>
+<body><header>
+    <nav class="breadcrumb grape">
+	<h4><a href="/">Shevon`s Blog</a></h4>
+	<div id="space"></div>
+        
+        <a href="/">Home</a>
+        
+        <a href="/posts">Posts</a>
+        
+    </nav>
+</header>
+
+<main id="single">
+    <div id="post" class="white">
+	<div class="container">
+	    <div id="title">
+                <h1>在命令行下使用代理加速下载文件</h1>
+                <time datetime="2016-11-12T13:59:15&#43;0000">2016-11-12</time>
+
+	    </div>
+            <section class="post-content">
+                <p><strong>如果电脑上装了 Shadowsocks 的话</strong>，可以在命令行中使用下面两句命令：</p>
+
+<pre><code>set http_proxy=http://127.0.0.1:8123
+set https_proxy=http://127.0.0.1:8123
+</code></pre>
+
+<p>在 <code>Linux</code> 中，不用加 <code>set</code> 直接输入：</p>
+
+<pre><code>http_proxy=http://127.0.0.1:8123  
+https_proxy=http://127.0.0.1:8123
+</code></pre>
+
+<p><code>8123</code> 端口，就是 <code>http</code> 代理的端口</p>
+
+<p><strong>注意：在命令行里只能走 <code>http</code> 代理。</strong></p>
+
+<p>如果使用的其它代理软件，那就要根据这个软件来选择端口号。</p>
+
+<p>在命令行里下载的话，都可以用上述命令行提升下载速度，例如  <code>npm</code> 、 <code>pip</code>  这些。</p>
+
+            </section>
+	</div>
+    </div>
+</main>
+<footer class="sand">
+    <span class="footer-text">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
+</footer>
+<link rel="stylesheet" href="https://shevonwang.github.io/css/solarized-light.css"/>
+<script src="https://shevonwang.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

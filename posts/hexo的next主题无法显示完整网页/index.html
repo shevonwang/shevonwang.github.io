@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>hexo的next主题无法显示完整网页 - Shevon`s Blog</title>
+    <base href="https://shevonwang.github.io/">
+    <link rel="stylesheet" href="https://shevonwang.github.io/css/styles.css">
+    <link rel="stylesheet" href="https://shevonwang.github.io/css/font.css">
+</head>
+<body><header>
+    <nav class="breadcrumb grape">
+	<h4><a href="/">Shevon`s Blog</a></h4>
+	<div id="space"></div>
+        
+        <a href="/">Home</a>
+        
+        <a href="/posts">Posts</a>
+        
+    </nav>
+</header>
+
+<main id="single">
+    <div id="post" class="white">
+	<div class="container">
+	    <div id="title">
+                <h1>hexo的next主题无法显示完整网页</h1>
+                <time datetime="2016-11-13T11:32:36&#43;0000">2016-11-13</time>
+
+	    </div>
+            <section class="post-content">
+                <p>前几天上传了一篇文章后，就发现我的博客显示不出完整网页，F12检查，发现说的是没有获取到vendors目录下的资源。所以网上找了找原因，发现不少人都出现了这个问题.。</p>
+
+<p>我最开始使用的解决方案是由<a href="https://dslztx.github.io/blog">dslztx</a>博主提供的，就是在 <code>.deploy_git</code> 子目录下添加一个名为 <code>.nojekyll</code> 的文件。在具体部署时，该文件被提交到相应的  <code>Github Repository</code> ，从而使得能够正常使用Hexo生成的静态站点。这个时候网页就可以正常完整的显示出来了。</p>
+
+<p>此时我的next主题版本是 <code>5.0.2</code> 的，在我升成 <code>5.1.0</code> 后，发现问题又来了，跟原来问题一样，网页又不能正常显示了。直接上Git Hub，发现是作者将 <code>vendors</code> 目录改名成 <code>lib</code> ，但是在主题配置文件 <code>_config.yml</code> 里， <code>vendors:</code>  仍是 <code>_internal: vendors</code>  ， 这样肯定不行。</p>
+
+<p>所以，在主题配置文件里，要将 <code>_internal: vendors</code> 改成 <code>_internal: lib</code> 其它不用改，这样就可以了。</p>
+
+<p>网页又可以正常显示了   ^_^   。</p>
+
+            </section>
+	</div>
+    </div>
+</main>
+<footer class="sand">
+    <span class="footer-text">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
+</footer>
+<link rel="stylesheet" href="https://shevonwang.github.io/css/solarized-light.css"/>
+<script src="https://shevonwang.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

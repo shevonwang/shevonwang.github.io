@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>免流 - Shevon`s Blog</title>
+    <base href="https://shevonwang.github.io/">
+    <link rel="stylesheet" href="https://shevonwang.github.io/css/styles.css">
+    <link rel="stylesheet" href="https://shevonwang.github.io/css/font.css">
+</head>
+<body><header>
+    <nav class="breadcrumb grape">
+	<h4><a href="/">Shevon`s Blog</a></h4>
+	<div id="space"></div>
+        
+        <a href="/">Home</a>
+        
+        <a href="/posts">Posts</a>
+        
+    </nav>
+</header>
+
+<main id="list">
+    <div id="posts" class="grape">
+	<div class="container">
+            <h1>免流</h1>
+            <ul>
+                
+                <li>
+                    <a href="https://shevonwang.github.io/posts/%E6%8F%90%E5%8D%87%E7%99%BE%E5%BA%A6%E4%BA%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6/">提升百度云盘下载速度</a>
+                    <p><time datetime="2018-04-13T20:10:32&#43;0000">2018-04-13</time>
+</p>
+		    <p>将要下载的文件先保存在百度云盘里，一定要保存，不然抓不了数据。用网页版的百度云下载这文件，F12， 在 Network 里找到 download?sing=...... 这里，在 Headers 中,将 Cookie 复制并替换掉 aria2c.txt 里的相应部分。在 Response 中复制链接并替换掉 aria2c.txt 里的相应部分。
+在 cmd 中打开 aria2c.exe ，将 aria2c.txt 中的命令全部复制进去就可以执行 aria2c.exe 了。...</p>
+                </li>
+                
+                <li>
+                    <a href="https://shevonwang.github.io/posts/%E8%80%83%E8%AF%95/">考试</a>
+                    <p><time datetime="2016-12-04T15:08:28&#43;0000">2016-12-04</time>
+</p>
+		    <p>**********************************************准备期末考试中...</p>
+                </li>
+                
+                <li>
+                    <a href="https://shevonwang.github.io/posts/python%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">Python字符编码</a>
+                    <p><time datetime="2016-11-16T12:48:55&#43;0000">2016-11-16</time>
+</p>
+		    <p>用python爬学校官网，发现抓取的中文乱码，所以就 pip 下了个 chardet 包，感觉挺好。
+先用 chardet.detect(str) 判断字符格式，然后搭配着 unicode(str, &quot;字符格式&quot;).encode(&quot;UTF-8&quot;) ，将 GBK 、 GB2312 等格式的字符转为 UTF-8。
+这样咱们的中文就可以正常显示啦！ ^-^...</p>
+                </li>
+                
+                <li>
+                    <a href="https://shevonwang.github.io/posts/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E5%AE%8C%E6%95%B4%E7%BD%91%E9%A1%B5/">hexo的next主题无法显示完整网页</a>
+                    <p><time datetime="2016-11-13T11:32:36&#43;0000">2016-11-13</time>
+</p>
+		    <p>前几天上传了一篇文章后，就发现我的博客显示不出完整网页，F12检查，发现说的是没有获取到vendors目录下的资源。所以网上找了找原因，发现不少人都出现了这个问题.。
+我最开始使用的解决方案是由dslztx博主提供的，就是在 .deploy_git 子目录下添加一个名为 .nojekyll 的文件。在具体部署时，该文件被提交到相应的 Github Repository ，从而使得能够正常使用Hexo生成的静态站点。这个时候网页就可以正常完整的显示出来了。
+此时我的next主题版本是 5.0.2 的，在我升成 5.1.0 后，发现问题又来了，跟原来问题一样，网页又不能正常显示了。直接上Git Hub，发现是作者将 vendors 目录改名成 lib ，但是在主题配置文件 _config.yml 里， vendors: 仍是 _internal: vendors ， 这样肯定不行。
+所以，在主题配置文件里，要将 _internal: vendors 改成 _internal: lib 其它不用改，这样就可以了。
+网页又可以正常显示了 ^_^ 。...</p>
+                </li>
+                
+                <li>
+                    <a href="https://shevonwang.github.io/posts/%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%E5%8A%A0%E9%80%9F%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/">在命令行下使用代理加速下载文件</a>
+                    <p><time datetime="2016-11-12T13:59:15&#43;0000">2016-11-12</time>
+</p>
+		    <p>如果电脑上装了 Shadowsocks 的话，可以在命令行中使用下面两句命令：
+set http_proxy=http://127.0.0.1:8123 set https_proxy=http://127.0.0.1:8123  在 Linux 中，不用加 set 直接输入：
+http_proxy=http://127.0.0.1:8123 https_proxy=http://127.0.0.1:8123  8123 端口，就是 http 代理的端口
+注意：在命令行里只能走 http 代理。
+如果使用的其它代理软件，那就要根据这个软件来选择端口号。
+在命令行里下载的话，都可以用上述命令行提升下载速度，例如 npm 、 pip 这些。...</p>
+                </li>
+                
+                <li>
+                    <a href="https://shevonwang.github.io/posts/python%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhttp%E6%9C%8D%E5%8A%A1/">Python快速搭建HTTP服务</a>
+                    <p><time datetime="2016-10-25T22:22:52&#43;0000">2016-10-25</time>
+</p>
+		    <p>今天逛知乎，发现了个关于Python好玩的命令行，还挺实用的。
+在安装了Python的前提下，可以在终端使用一行命令快速搭建HTTP服务。命令行如下：
+python -m SimpleHTTPServer 8000
+在同个局域网下的电脑，通过&rdquo;ip:端口&rdquo;，也可以实现文件目录共享。 若需退出，可 Ctrl+C 终止此进程。...</p>
+                </li>
+                
+                <li>
+                    <a href="https://shevonwang.github.io/posts/%E5%85%8D%E6%B5%81%E5%B8%B8%E7%94%A8%E7%AB%AF%E5%8F%A3/">免流常用端口</a>
+                    <p><time datetime="2016-10-23T23:33:39&#43;0000">2016-10-23</time>
+</p>
+		    <p> 移动免流端口：137 138 264 524
+ 电信免流端口：189
+ 联通免流端口：130 131 132 155 156 185 186 145 176
+  ...</p>
+                </li>
+                
+                <li>
+                    <a href="https://shevonwang.github.io/posts/hexo%E5%88%A0%E9%99%A4git-commit%E5%8E%86%E5%8F%B2/">hexo删除git commit历史</a>
+                    <p><time datetime="2016-10-23T15:49:03&#43;0000">2016-10-23</time>
+</p>
+		    <p>由于github给的pages免费空间只有300M，所以很有必要及时清理以前留下的commit历史记录。
+操作步骤如下：
+ 将 .deply_git 文件备份，以免意外情况发生
+ 删除 .deploy_git 和 public 文件
+ 进入 \hexo\blog 路径
+ 依次执行 hexo clean hexo g -d
+  ...</p>
+                </li>
+                
+                <li>
+                    <a href="https://shevonwang.github.io/posts/shadowsocksr%E4%BB%A3%E7%90%86%E8%85%BE%E8%AE%AF%E4%BA%91%E5%85%8D%E6%B5%81-%E4%B8%8B/">shadowsocksR代理腾讯云免流(下)</a>
+                    <p><time datetime="2016-10-23T14:33:34&#43;0000">2016-10-23</time>
+</p>
+		    <p>shadowsockR配置 按照上一篇文章的操作步骤，此时已进入putty的命令行输入框，即可以通过putty操作腾讯云服务器。
+1.基本库安装 centos版：
+yum install python-setuptools &amp;&amp; easy_install pip yum install git
+2.获取源代码 git clone -b manyuser https://github.com/breakwa11/shadowsocks.git
+执行完毕后此目录会新建一个shadowsocks目录，其中根目录的是多用户版（即数据库版），子目录中的是单用户版。
+根目录即 ./shadowsocks
+子目录即 ./shadowsocks/shadowsocks
+3.服务端配置 shadowsocks目录内，把apiconfig.py复制为userapiconfig.py后，对userapiconfig.py里以上内容进行相应修改：
+vim userapiconfig.py
+敲 I 进入编辑模式，修改接口类型 API_INTERFACE = 'mudbjson' 按 Esc 退出编辑模式，编辑:wq 退出。
+接着，通过使用脚本mujson_mgr.py添加端口及相应的加密、协议、混淆等配置：
+python mujson_mgr.py -a -p 138 -k 123456 -m rc4-md5 -O auth_sha1_v2_compatible -o http_simple_compatible
+注：123456为shadowsocksR客户端密码。
+4.服务端运行与停止
+增加脚本可执行权限
+chmod +x *.sh
+后台运行（无log，ssh窗口关闭后也继续运行）
+./run.sh
+后台运行（输出log，ssh窗口关闭后也继续运行）
+./logrun.sh
+后台运行时查看运行情况
+./tail.sh
+停止运行
+./stop.sh
+注：通过脚本运行默认日志会保存在根目录的ssserver.log，可手动查看。
+5.更新源代码
+如果代码有更新可用本命令更新代码...</p>
+                </li>
+                
+                <li>
+                    <a href="https://shevonwang.github.io/posts/shadowsocksr%E4%BB%A3%E7%90%86%E8%85%BE%E8%AE%AF%E4%BA%91%E5%85%8D%E6%B5%81-%E4%B8%8A/">shadowsocksR代理腾讯云免流(上)</a>
+                    <p><time datetime="2016-10-23T13:59:07&#43;0000">2016-10-23</time>
+</p>
+		    <p>安装配置putty 1.下载 进入 下载地址。 下载 The latest release version (稳定版)的 Zip file: putty.zip。
+2.生成公钥和私钥 在 puttygen 里生成公钥保存私钥，并且在 腾讯云控制台 创建刚刚在 puttygen 里生成的公钥。
+3.配置 在 putty 中， Window -&gt; Translation -&gt; Remote character set:选择为 UTF-8。
+Connection -&gt; SSH -&gt; Auth -&gt; Private key file for authentication: 选择保存好的私钥文件路径。
+Session -&gt; Host Name 中编辑 root@你的主机IP (公网IP) -&gt; Saved Sessions 编辑一个名字方便存储 -&gt; save ，下次登录可直接 load。
+到此为止完成 putty 的配置， 点击 open 弹出黑框框，此时可开始配置 shadowsocks。...</p>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</main>
+<footer class="sand">
+    <span class="footer-text">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
+</footer>
+<link rel="stylesheet" href="https://shevonwang.github.io/css/solarized-light.css"/>
+<script src="https://shevonwang.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

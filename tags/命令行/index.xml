@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>命令行 on Shevon`s Blog</title>
+    <link>https://shevonwang.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/</link>
+    <description>Recent content in 命令行 on Shevon`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Nov 2016 13:59:15 +0000</lastBuildDate>
+    
+	<atom:link href="https://shevonwang.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在命令行下使用代理加速下载文件</title>
+      <link>https://shevonwang.github.io/posts/%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%E5%8A%A0%E9%80%9F%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Sat, 12 Nov 2016 13:59:15 +0000</pubDate>
+      
+      <guid>https://shevonwang.github.io/posts/%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%E5%8A%A0%E9%80%9F%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/</guid>
+      <description>如果电脑上装了 Shadowsocks 的话，可以在命令行中使用下面两句命令：
+set http_proxy=http://127.0.0.1:8123 set https_proxy=http://127.0.0.1:8123  在 Linux 中，不用加 set 直接输入：
+http_proxy=http://127.0.0.1:8123 https_proxy=http://127.0.0.1:8123  8123 端口，就是 http 代理的端口
+注意：在命令行里只能走 http 代理。
+如果使用的其它代理软件，那就要根据这个软件来选择端口号。
+在命令行里下载的话，都可以用上述命令行提升下载速度，例如 npm 、 pip 这些。</description>
+    </item>
+    
+    <item>
+      <title>Python快速搭建HTTP服务</title>
+      <link>https://shevonwang.github.io/posts/python%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhttp%E6%9C%8D%E5%8A%A1/</link>
+      <pubDate>Tue, 25 Oct 2016 22:22:52 +0000</pubDate>
+      
+      <guid>https://shevonwang.github.io/posts/python%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhttp%E6%9C%8D%E5%8A%A1/</guid>
+      <description>今天逛知乎，发现了个关于Python好玩的命令行，还挺实用的。
+在安装了Python的前提下，可以在终端使用一行命令快速搭建HTTP服务。命令行如下：
+python -m SimpleHTTPServer 8000
+在同个局域网下的电脑，通过&amp;rdquo;ip:端口&amp;rdquo;，也可以实现文件目录共享。 若需退出，可 Ctrl+C 终止此进程。</description>
+    </item>
+    
+  </channel>
+</rss>

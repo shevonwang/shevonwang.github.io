@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>shadowsocksR代理腾讯云免流(上) - Shevon`s Blog</title>
+    <base href="https://shevonwang.github.io/">
+    <link rel="stylesheet" href="https://shevonwang.github.io/css/styles.css">
+    <link rel="stylesheet" href="https://shevonwang.github.io/css/font.css">
+</head>
+<body><header>
+    <nav class="breadcrumb grape">
+	<h4><a href="/">Shevon`s Blog</a></h4>
+	<div id="space"></div>
+        
+        <a href="/">Home</a>
+        
+        <a href="/posts">Posts</a>
+        
+    </nav>
+</header>
+
+<main id="single">
+    <div id="post" class="white">
+	<div class="container">
+	    <div id="title">
+                <h1>shadowsocksR代理腾讯云免流(上)</h1>
+                <time datetime="2016-10-23T13:59:07&#43;0000">2016-10-23</time>
+
+	    </div>
+            <section class="post-content">
+                
+
+<h2 id="安装配置putty">安装配置putty</h2>
+
+<h3 id="1-下载">1.下载</h3>
+
+<p>进入 <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">下载地址</a>。
+下载 <code>The latest release version</code> (稳定版)的 <code>Zip file: putty.zip</code>。</p>
+
+<h3 id="2-生成公钥和私钥">2.生成公钥和私钥</h3>
+
+<p>在 <code>puttygen</code> 里生成公钥保存私钥，并且在 <a href="https://console.qcloud.com/cvm/sshkey">腾讯云控制台</a> 创建刚刚在 <code>puttygen</code> 里生成的公钥。</p>
+
+<h3 id="3-配置">3.配置</h3>
+
+<p>在 <code>putty</code> 中， <code>Window</code> <code>-&gt;</code> <code>Translation</code> <code>-&gt;</code> <code>Remote character set:</code>选择为 <code>UTF-8</code>。</p>
+
+<p><code>Connection</code> <code>-&gt;</code> <code>SSH</code> <code>-&gt;</code> <code>Auth</code> <code>-&gt;</code> <code>Private key file for authentication:</code> 选择保存好的私钥文件路径。</p>
+
+<p><code>Session</code> <code>-&gt;</code> <code>Host Name</code> 中编辑 <code>root@你的主机IP</code> (公网IP) <code>-&gt;</code> <code>Saved Sessions</code> 编辑一个名字方便存储 <code>-&gt;</code> <code>save</code> ，下次登录可直接 <code>load</code>。</p>
+
+<p>到此为止完成 <code>putty</code> 的配置， 点击 <code>open</code> 弹出黑框框，此时可开始配置 <code>shadowsocks</code>。</p>
+
+            </section>
+	</div>
+    </div>
+</main>
+<footer class="sand">
+    <span class="footer-text">Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
+</footer>
+<link rel="stylesheet" href="https://shevonwang.github.io/css/solarized-light.css"/>
+<script src="https://shevonwang.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

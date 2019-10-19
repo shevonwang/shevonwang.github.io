@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>日常 on Shevon`s Blog</title>
+    <link>https://shevonwang.github.io/tags/%E6%97%A5%E5%B8%B8/</link>
+    <description>Recent content in 日常 on Shevon`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Apr 2018 20:10:32 +0000</lastBuildDate>
+    
+	<atom:link href="https://shevonwang.github.io/tags/%E6%97%A5%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>提升百度云盘下载速度</title>
+      <link>https://shevonwang.github.io/posts/%E6%8F%90%E5%8D%87%E7%99%BE%E5%BA%A6%E4%BA%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6/</link>
+      <pubDate>Fri, 13 Apr 2018 20:10:32 +0000</pubDate>
+      
+      <guid>https://shevonwang.github.io/posts/%E6%8F%90%E5%8D%87%E7%99%BE%E5%BA%A6%E4%BA%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6/</guid>
+      <description>将要下载的文件先保存在百度云盘里，一定要保存，不然抓不了数据。用网页版的百度云下载这文件，F12， 在 Network 里找到 download?sing=...... 这里，在 Headers 中,将 Cookie 复制并替换掉 aria2c.txt 里的相应部分。在 Response 中复制链接并替换掉 aria2c.txt 里的相应部分。
+在 cmd 中打开 aria2c.exe ，将 aria2c.txt 中的命令全部复制进去就可以执行 aria2c.exe 了。</description>
+    </item>
+    
+    <item>
+      <title>考试</title>
+      <link>https://shevonwang.github.io/posts/%E8%80%83%E8%AF%95/</link>
+      <pubDate>Sun, 04 Dec 2016 15:08:28 +0000</pubDate>
+      
+      <guid>https://shevonwang.github.io/posts/%E8%80%83%E8%AF%95/</guid>
+      <description>**********************************************准备期末考试中</description>
+    </item>
+    
+  </channel>
+</rss>
